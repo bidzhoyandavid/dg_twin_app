@@ -56,7 +56,8 @@ export default function AISetupScreen() {
         throw new Error("Failed to connect to ChatGPT");
       }
 
-      router.push("/chat");
+      // Navigate to dashboard instead of chat
+      router.replace("/dashboard");
     } catch (error) {
       console.error("Error setting up AI:", error);
     } finally {
